@@ -1,21 +1,25 @@
-//
-//  RootViewController.swift
-//  HelloSwift
-//
-//  Created by 田中改 on 2020/02/15.
-//  Copyright © 2020 Aratoon. All rights reserved.
-//
-
 import SwiftUI
 
-struct RootViewController: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
-}
-
-struct RootViewController_Previews: PreviewProvider {
-    static var previews: some View {
-        RootViewController()
+final class RootViewController: UIViewController {
+    private lazy var container: UIView = {
+        let view = UIView()
+        let container = UILabel()
+        let text = "Hello Hello World"
+        container.text = text
+        container.textColor = UIColor.black
+        container.textAlignment = .center
+        container.sizeToFit()
+        view.addSubview(container)
+        return view
+    }()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        navigationItem.title = "Root"
+        self.view.backgroundColor = UIColor.white
+        
+        self.view.addSubview(container)
+        container.snp
     }
 }
