@@ -19,7 +19,7 @@ class FirstViewController: UICollectionViewController {
         })
         self.collectionView.backgroundColor = .white
         
-        collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
+        collectionView.contentInset = UIEdgeInsets(top: 50, left: 8, bottom: 8, right: 8)
         collectionView.register(
             MDCSelfSizingStereoCell.self,
             forCellWithReuseIdentifier: "EventCollectionViewCell")

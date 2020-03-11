@@ -1,11 +1,47 @@
 PODS:
   - Alamofire (5.0.2)
   - MaterialComponents/AnimationTiming (107.2.0)
+  - MaterialComponents/AppBar (107.2.0):
+    - MaterialComponents/FlexibleHeader
+    - MaterialComponents/HeaderStackView
+    - MaterialComponents/NavigationBar
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Icons/ic_arrow_back
+    - MaterialComponents/private/UIMetrics
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
   - MaterialComponents/Availability (107.2.0)
+  - MaterialComponents/ButtonBar (107.2.0):
+    - MaterialComponents/Buttons
+    - MaterialComponents/private/Application
+    - MDFInternationalization
+  - MaterialComponents/Buttons (107.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
   - MaterialComponents/Elevation (107.2.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
     - MaterialComponents/private/Math
+  - MaterialComponents/FlexibleHeader (107.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+    - MaterialComponents/private/UIMetrics
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MDFTextAccessibility
+  - MaterialComponents/HeaderStackView (107.2.0)
   - MaterialComponents/Ink (107.2.0):
     - MaterialComponents/Availability
     - MaterialComponents/private/Color
@@ -19,10 +55,22 @@ PODS:
     - MaterialComponents/ShadowLayer
     - MaterialComponents/Typography
     - MDFInternationalization
+  - MaterialComponents/NavigationBar (107.2.0):
+    - MaterialComponents/ButtonBar
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
   - MaterialComponents/private/Application (107.2.0)
   - MaterialComponents/private/Color (107.2.0):
     - MaterialComponents/Availability
+  - MaterialComponents/private/Icons/Base (107.2.0)
+  - MaterialComponents/private/Icons/ic_arrow_back (107.2.0):
+    - MaterialComponents/private/Icons/Base
   - MaterialComponents/private/Math (107.2.0)
+  - MaterialComponents/private/UIMetrics (107.2.0):
+    - MaterialComponents/private/Application
   - MaterialComponents/Ripple (107.2.0):
     - MaterialComponents/AnimationTiming
     - MaterialComponents/private/Color
@@ -30,14 +78,20 @@ PODS:
   - MaterialComponents/ShadowElevations (107.2.0)
   - MaterialComponents/ShadowLayer (107.2.0):
     - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (107.2.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
   - MaterialComponents/Typography (107.2.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
+  - MaterialComponents/AppBar
   - MaterialComponents/List
   - SnapKit
 
@@ -46,14 +100,16 @@ SPEC REPOS:
     - Alamofire
     - MaterialComponents
     - MDFInternationalization
+    - MDFTextAccessibility
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
   MaterialComponents: 4dd1927cd2257e564983018906e152d18cda0c03
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: a1c7256981c2f3df40945834834001c80a8da096
+PODFILE CHECKSUM: 26b9235a290c309644cbb4b9a4bbc122343dfe26
 
 COCOAPODS: 1.8.4

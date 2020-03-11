@@ -7,6 +7,7 @@ target 'HelloSwift' do
   pod 'SnapKit'
   pod 'Alamofire', '~> 5.0'
   pod 'MaterialComponents/List'
+  pod 'MaterialComponents/AppBar'
 
   # Pods for HelloSwift
 
