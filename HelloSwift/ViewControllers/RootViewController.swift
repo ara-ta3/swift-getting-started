@@ -27,7 +27,7 @@ final class RootViewController: UITabBarController {
         secondView = SecondViewController()
         secondView.tabBarItem = UITabBarItem(
             tabBarSystemItem: UITabBarItem.SystemItem.recents,
-            tag: 2
+            tag: 2 
         )
 
         self.setViewControllers(
