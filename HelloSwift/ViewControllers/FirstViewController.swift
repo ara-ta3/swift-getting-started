@@ -1,5 +1,6 @@
 import UIKit
 import Alamofire
+import MaterialComponents.MaterialList
 
 class FirstViewController: UICollectionViewController {
     fileprivate var items: [String] = []
@@ -20,7 +21,7 @@ class FirstViewController: UICollectionViewController {
         
         collectionView.contentInset = UIEdgeInsets(top: 8, left: 8, bottom: 8, right: 8)
         collectionView.register(
-            EventCollectionViewCell.self,
+            MDCSelfSizingStereoCell.self,
             forCellWithReuseIdentifier: "EventCollectionViewCell")
 
 
@@ -40,9 +41,9 @@ extension FirstViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! EventCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! MDCSelfSizingStereoCell
         let text = items[indexPath.item]
-        cell.label.text = text
+        cell.titleLabel.text = text
         return cell
     }
 }

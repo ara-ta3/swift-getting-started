@@ -6,6 +6,7 @@ target 'HelloSwift' do
   use_frameworks!
   pod 'SnapKit'
   pod 'Alamofire', '~> 5.0'
+  pod 'MaterialComponents/List'
 
   # Pods for HelloSwift
 

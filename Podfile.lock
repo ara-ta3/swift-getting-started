@@ -1,20 +1,59 @@
 PODS:
   - Alamofire (5.0.2)
+  - MaterialComponents/AnimationTiming (107.2.0)
+  - MaterialComponents/Availability (107.2.0)
+  - MaterialComponents/Elevation (107.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (107.2.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/List (107.2.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/private/Application (107.2.0)
+  - MaterialComponents/private/Color (107.2.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (107.2.0)
+  - MaterialComponents/Ripple (107.2.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (107.2.0)
+  - MaterialComponents/ShadowLayer (107.2.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Typography (107.2.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
+  - MaterialComponents/List
   - SnapKit
 
 SPEC REPOS:
   trunk:
     - Alamofire
+    - MaterialComponents
+    - MDFInternationalization
     - SnapKit
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  MaterialComponents: 4dd1927cd2257e564983018906e152d18cda0c03
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 580b33d2b0040d05532760ece3aaf34e667006bd
+PODFILE CHECKSUM: a1c7256981c2f3df40945834834001c80a8da096
 
 COCOAPODS: 1.8.4
