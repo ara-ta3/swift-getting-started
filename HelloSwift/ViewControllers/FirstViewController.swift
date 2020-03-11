@@ -43,7 +43,9 @@ extension FirstViewController {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventCollectionViewCell", for: indexPath) as! MDCSelfSizingStereoCell
         let text = items[indexPath.item]
+        cell.titleLabel.font = UIFont.systemFont(ofSize: 18)
         cell.titleLabel.text = text
+
         return cell
     }
 }
