@@ -1,22 +1,15 @@
 import UIKit
 import Alamofire
 import MaterialComponents.MaterialList
+import ReSwift
 
-class FirstViewController: UICollectionViewController {
+class FirstViewController: UICollectionViewController, StoreSubscriber {
     fileprivate var items: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let eventGateway = EventGateway(eventOrigin: "https://event.api.supporterz.jp")
-        eventGateway.fetchEvents(completion: { (result: Result<[Event], AFError>) in
-            switch(result) {
-            case .success(let events):
-                self.items = events.map {(e: Event) -> String in e.name}
-                self.collectionView.reloadData()
-            case .failure(let e):
-                debugPrint(e)
-            }
-        })
+        mainStore.subscribe(self)
+        
         self.collectionView.backgroundColor = .white
         
         collectionView.contentInset = UIEdgeInsets(top: 50, left: 8, bottom: 8, right: 8)
@@ -32,6 +25,13 @@ class FirstViewController: UICollectionViewController {
         
         collectionView.dataSource = self
         collectionView.delegate = self
+        
+        fetchEvents(store: mainStore, eventGateway: eventGateway)
+    }
+    
+    func newState(state: AppState) {
+        self.items = state.events.map {(e: Event) -> String in e.name}
+        self.collectionView.reloadData()
     }
 }
 

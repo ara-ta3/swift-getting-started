@@ -87,12 +87,14 @@ PODS:
     - MaterialComponents/private/Math
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
+  - ReSwift (5.0.0)
   - SnapKit (5.0.1)
 
 DEPENDENCIES:
   - Alamofire (~> 5.0)
   - MaterialComponents/AppBar
   - MaterialComponents/List
+  - ReSwift
   - SnapKit
 
 SPEC REPOS:
@@ -101,6 +103,7 @@ SPEC REPOS:
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
+    - ReSwift
     - SnapKit
 
 SPEC CHECKSUMS:
@@ -108,8 +111,9 @@ SPEC CHECKSUMS:
   MaterialComponents: 4dd1927cd2257e564983018906e152d18cda0c03
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  ReSwift: 628f1a9b3ee52e3b3ca2a644435472fd77afafe1
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 26b9235a290c309644cbb4b9a4bbc122343dfe26
+PODFILE CHECKSUM: 9444a0d23ecde45cdde0d1ca0604fdf9e59bff73
 
 COCOAPODS: 1.8.4

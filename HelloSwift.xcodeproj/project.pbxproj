@@ -11,6 +11,11 @@
 		AB89B37D23F80C0E004C10B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89B37C23F80C0E004C10B2 /* RootViewController.swift */; };
 		ABB3480223F81927003C1FCC /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3480123F81927003C1FCC /* FirstViewController.swift */; };
 		ABB3480423F81978003C1FCC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3480323F81978003C1FCC /* SecondViewController.swift */; };
+		ABC8670C241A158000103C85 /* Epic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8670B241A158000103C85 /* Epic.swift */; };
+		ABC8670E241A179800103C85 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8670D241A179800103C85 /* State.swift */; };
+		ABC86710241A17D800103C85 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8670F241A17D800103C85 /* Action.swift */; };
+		ABC86712241A1AF400103C85 /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC86711241A1AF400103C85 /* Reducer.swift */; };
+		ABC86714241A1EB300103C85 /* Contract.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC86713241A1EB300103C85 /* Contract.swift */; };
 		ABF68C592418BC6900F520E4 /* Gateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF68C582418BC6900F520E4 /* Gateway.swift */; };
 		ABF7A9F723BD02DC006CEEB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7A9F623BD02DC006CEEB4 /* AppDelegate.swift */; };
 		ABF7A9F923BD02DC006CEEB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF7A9F823BD02DC006CEEB4 /* SceneDelegate.swift */; };
@@ -51,6 +56,11 @@
 		AB89B37C23F80C0E004C10B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		ABB3480123F81927003C1FCC /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		ABB3480323F81978003C1FCC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ABC8670B241A158000103C85 /* Epic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic.swift; sourceTree = "<group>"; };
+		ABC8670D241A179800103C85 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		ABC8670F241A17D800103C85 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		ABC86711241A1AF400103C85 /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		ABC86713241A1EB300103C85 /* Contract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contract.swift; sourceTree = "<group>"; };
 		ABF68C582418BC6900F520E4 /* Gateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gateway.swift; sourceTree = "<group>"; };
 		ABF7A9F323BD02DC006CEEB4 /* HelloSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABF7A9F623BD02DC006CEEB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +127,17 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		ABC867072419F02700103C85 /* Event */ = {
+			isa = PBXGroup;
+			children = (
+				ABF68C582418BC6900F520E4 /* Gateway.swift */,
+				ABC8670B241A158000103C85 /* Epic.swift */,
+				ABC8670D241A179800103C85 /* State.swift */,
+				ABC86711241A1AF400103C85 /* Reducer.swift */,
+			);
+			path = Event;
+			sourceTree = "<group>";
+		};
 		ABF7A9EA23BD02DB006CEEB4 = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +163,7 @@
 		ABF7A9F523BD02DC006CEEB4 /* HelloSwift */ = {
 			isa = PBXGroup;
 			children = (
+				ABC867072419F02700103C85 /* Event */,
 				AB89B37B23F80BDB004C10B2 /* ViewControllers */,
 				ABF7A9F623BD02DC006CEEB4 /* AppDelegate.swift */,
 				ABF7A9F823BD02DC006CEEB4 /* SceneDelegate.swift */,
@@ -149,7 +171,8 @@
 				ABF7AA0123BD02EA006CEEB4 /* LaunchScreen.storyboard */,
 				ABF7AA0423BD02EA006CEEB4 /* Info.plist */,
 				ABF7A9FE23BD02EA006CEEB4 /* Preview Content */,
-				ABF68C582418BC6900F520E4 /* Gateway.swift */,
+				ABC8670F241A17D800103C85 /* Action.swift */,
+				ABC86713241A1EB300103C85 /* Contract.swift */,
 			);
 			path = HelloSwift;
 			sourceTree = "<group>";
@@ -432,12 +455,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABC8670C241A158000103C85 /* Epic.swift in Sources */,
+				ABC86710241A17D800103C85 /* Action.swift in Sources */,
 				ABF7A9F723BD02DC006CEEB4 /* AppDelegate.swift in Sources */,
 				ABF7A9F923BD02DC006CEEB4 /* SceneDelegate.swift in Sources */,
 				AB89B37D23F80C0E004C10B2 /* RootViewController.swift in Sources */,
 				ABB3480423F81978003C1FCC /* SecondViewController.swift in Sources */,
+				ABC86714241A1EB300103C85 /* Contract.swift in Sources */,
 				ABF68C592418BC6900F520E4 /* Gateway.swift in Sources */,
 				ABB3480223F81927003C1FCC /* FirstViewController.swift in Sources */,
+				ABC86712241A1AF400103C85 /* Reducer.swift in Sources */,
+				ABC8670E241A179800103C85 /* State.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

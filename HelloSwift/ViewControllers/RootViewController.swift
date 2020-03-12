@@ -1,6 +1,7 @@
 import SwiftUI
 import SnapKit
 import UIKit
+import ReSwift
 import MaterialComponents.MaterialAppBar
 
 final class RootViewController: UITabBarController {
@@ -14,9 +15,9 @@ final class RootViewController: UITabBarController {
     }()
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
-      super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
         self.addChild(appBarViewController)
+
     }
     
     required init?(coder: NSCoder) {
