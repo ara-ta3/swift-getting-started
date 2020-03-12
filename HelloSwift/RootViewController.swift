@@ -5,8 +5,26 @@ import ReSwift
 import MaterialComponents.MaterialAppBar
 
 final class RootViewController: UITabBarController {
-    var firstView: EventListViewController!
-    var secondView: SecondViewController!
+    let topView: TopViewController = {
+        
+        let view = TopViewController()
+
+        view.tabBarItem = UITabBarItem(
+            tabBarSystemItem: UITabBarItem.SystemItem.mostRecent,
+            tag: 1
+        )
+        return view
+    }()
+        
+    let eventListView: EventListViewController = {
+        let view = EventListViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        view.tabBarItem = UITabBarItem(
+            tabBarSystemItem: UITabBarItem.SystemItem.search,
+            tag: 2
+        )
+        return view
+    }()
+
     private let appBarViewController = { () -> MDCAppBarViewController in
         let viewController = MDCAppBarViewController()
         viewController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
@@ -27,23 +45,12 @@ final class RootViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        firstView = EventListViewController(collectionViewLayout: UICollectionViewFlowLayout())
-        firstView.tabBarItem = UITabBarItem(
-            tabBarSystemItem: UITabBarItem.SystemItem.featured,
-            tag: 1
-        )
-        secondView = SecondViewController()
-        secondView.tabBarItem = UITabBarItem(
-            tabBarSystemItem: UITabBarItem.SystemItem.recents,
-            tag: 2 
-        )
-
         self.setViewControllers(
             [
-                firstView,
-                secondView
+                topView,
+                eventListView
             ],
-            animated: false
+            animated: true
         )
 
         navigationItem.title = "サポーターズ"

@@ -10,7 +10,7 @@
 		7BFFC10C52E776AA93B29718 /* Pods_HelloSwift_HelloSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 393FA83BB054A4ADD9177704 /* Pods_HelloSwift_HelloSwiftUITests.framework */; };
 		AB89B37D23F80C0E004C10B2 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB89B37C23F80C0E004C10B2 /* RootViewController.swift */; };
 		ABB3480223F81927003C1FCC /* EventListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3480123F81927003C1FCC /* EventListViewController.swift */; };
-		ABB3480423F81978003C1FCC /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3480323F81978003C1FCC /* SecondViewController.swift */; };
+		ABB3480423F81978003C1FCC /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABB3480323F81978003C1FCC /* TopViewController.swift */; };
 		ABC8670C241A158000103C85 /* Epic.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8670B241A158000103C85 /* Epic.swift */; };
 		ABC8670E241A179800103C85 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8670D241A179800103C85 /* State.swift */; };
 		ABC86710241A17D800103C85 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC8670F241A17D800103C85 /* Action.swift */; };
@@ -55,7 +55,7 @@
 		91E6E5F45C7AA6A8860F142A /* Pods-HelloSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloSwiftTests.debug.xcconfig"; path = "Target Support Files/Pods-HelloSwiftTests/Pods-HelloSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AB89B37C23F80C0E004C10B2 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		ABB3480123F81927003C1FCC /* EventListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventListViewController.swift; sourceTree = "<group>"; };
-		ABB3480323F81978003C1FCC /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		ABB3480323F81978003C1FCC /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
 		ABC8670B241A158000103C85 /* Epic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Epic.swift; sourceTree = "<group>"; };
 		ABC8670D241A179800103C85 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		ABC8670F241A17D800103C85 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -155,7 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				AB89B37C23F80C0E004C10B2 /* RootViewController.swift */,
-				ABB3480323F81978003C1FCC /* SecondViewController.swift */,
+				ABB3480323F81978003C1FCC /* TopViewController.swift */,
 				ABC867072419F02700103C85 /* Event */,
 				ABF7A9F623BD02DC006CEEB4 /* AppDelegate.swift */,
 				ABF7A9F823BD02DC006CEEB4 /* SceneDelegate.swift */,
@@ -452,7 +452,7 @@
 				ABF7A9F723BD02DC006CEEB4 /* AppDelegate.swift in Sources */,
 				ABF7A9F923BD02DC006CEEB4 /* SceneDelegate.swift in Sources */,
 				AB89B37D23F80C0E004C10B2 /* RootViewController.swift in Sources */,
-				ABB3480423F81978003C1FCC /* SecondViewController.swift in Sources */,
+				ABB3480423F81978003C1FCC /* TopViewController.swift in Sources */,
 				ABC86714241A1EB300103C85 /* Contract.swift in Sources */,
 				ABF68C592418BC6900F520E4 /* Gateway.swift in Sources */,
 				ABB3480223F81927003C1FCC /* EventListViewController.swift in Sources */,
