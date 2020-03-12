@@ -12,7 +12,12 @@ func eventList(action: Action, state: AppState?) -> AppState {
     var state = state ?? AppState()
     
     switch action {
-    case let action as FetchEventsFinish: state.events = action.events
+    case _ as FetchEventsStart: state.loading = true
+    case let action as FetchEventsFinish: do {
+        state.events = action.events
+        state.loading = false
+    }
+    case _ as FetchEventsFinish: state.loading = false
     default: break
     }
     

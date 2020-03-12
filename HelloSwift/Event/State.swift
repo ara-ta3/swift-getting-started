@@ -9,5 +9,6 @@
 import ReSwift
 
 struct AppState: StateType {
+    var loading: Bool = false
     var events: Array<Event> = []
 }

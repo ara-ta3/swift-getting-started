@@ -13,12 +13,13 @@ func fetchEvents(
     store: Store<AppState>,
     eventGateway: EventGateway
 ) {
+    store.dispatch(FetchEventsStart())
     eventGateway.fetchEvents(completion: { (result: Result<[Event], AFError>) in
         switch(result) {
         case .success(let events):
             store.dispatch(FetchEventsFinish(events: events))
         case .failure(let e):
-            debugPrint(e)
+            store.dispatch(FetchEventsFailed(error: e))
         }
     })
 }

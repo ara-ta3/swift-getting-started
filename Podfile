@@ -8,6 +8,7 @@ target 'HelloSwift' do
   pod 'Alamofire', '~> 5.0'
   pod 'MaterialComponents/List'
   pod 'MaterialComponents/AppBar'
+  pod 'MaterialComponents/ActivityIndicator'
   pod 'ReSwift'
 
   # Pods for HelloSwift

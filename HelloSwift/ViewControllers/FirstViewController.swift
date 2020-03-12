@@ -1,10 +1,17 @@
 import UIKit
 import Alamofire
 import MaterialComponents.MaterialList
+import MaterialComponents.MaterialActivityIndicator
 import ReSwift
 
 class FirstViewController: UICollectionViewController, StoreSubscriber {
     fileprivate var items: [String] = []
+    
+    private let activityIndicator: MDCActivityIndicator = {
+        let activityIndicator = MDCActivityIndicator()
+        activityIndicator.sizeToFit()
+        return activityIndicator
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,12 +33,25 @@ class FirstViewController: UICollectionViewController, StoreSubscriber {
         collectionView.dataSource = self
         collectionView.delegate = self
         
+
+        collectionView.addSubview(activityIndicator)
+        activityIndicator.snp.makeConstraints {make in
+            make.center.equalToSuperview()
+        }
+        
         fetchEvents(store: mainStore, eventGateway: eventGateway)
     }
     
     func newState(state: AppState) {
-        self.items = state.events.map {(e: Event) -> String in e.name}
+        if (state.loading) {
+            activityIndicator.startAnimating()
+        } else {
+            self.items = state.events.map {(e: Event) -> String in e.name}
+            activityIndicator.stopAnimating()
+        }
+        
         self.collectionView.reloadData()
+
     }
 }
 

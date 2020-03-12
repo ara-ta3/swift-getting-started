@@ -15,3 +15,13 @@ struct FetchEventsFinish: Action {
         self.events = events
     }
 }
+
+struct FetchEventsStart: Action {}
+
+struct FetchEventsFailed: Action {
+    let error: Error
+    
+    init(error: Error) {
+        self.error = error
+    }
+}
