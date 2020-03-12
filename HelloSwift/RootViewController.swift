@@ -5,7 +5,7 @@ import ReSwift
 import MaterialComponents.MaterialAppBar
 
 final class RootViewController: UITabBarController {
-    var firstView: FirstViewController!
+    var firstView: EventListViewController!
     var secondView: SecondViewController!
     private let appBarViewController = { () -> MDCAppBarViewController in
         let viewController = MDCAppBarViewController()
@@ -27,7 +27,7 @@ final class RootViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        firstView = FirstViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        firstView = EventListViewController(collectionViewLayout: UICollectionViewFlowLayout())
         firstView.tabBarItem = UITabBarItem(
             tabBarSystemItem: UITabBarItem.SystemItem.featured,
             tag: 1

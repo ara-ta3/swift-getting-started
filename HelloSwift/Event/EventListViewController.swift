@@ -4,7 +4,7 @@ import MaterialComponents.MaterialList
 import MaterialComponents.MaterialActivityIndicator
 import ReSwift
 
-class FirstViewController: UICollectionViewController, StoreSubscriber {
+class EventListViewController: UICollectionViewController, StoreSubscriber {
     fileprivate var items: [String] = []
     
     private let activityIndicator: MDCActivityIndicator = {
@@ -55,7 +55,7 @@ class FirstViewController: UICollectionViewController, StoreSubscriber {
     }
 }
 
-extension FirstViewController {
+extension EventListViewController {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }
@@ -70,7 +70,7 @@ extension FirstViewController {
     }
 }
 
-extension FirstViewController: UICollectionViewDelegateFlowLayout {
+extension EventListViewController: UICollectionViewDelegateFlowLayout {
 
   func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
 
